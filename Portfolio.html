@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahron Jay Portfolio</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Ahron Jay Portfolio</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+      <li><a href="#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="section">
+  <div class="hero-box">
+    <h1>Hi, I'm Ahron Jay</h1>
+    <p>Bachelor of Science in Entertainment Multimedia Computing</p>
+  </div>
+
+  <div class="roles-container">
+    <a href="#services" class="role-box"><h3>WEB DESIGNER</h3></a>
+    <a href="#services" class="role-box"><h3>3D MODEL</h3></a>
+    <a href="#services" class="role-box"><h3>EDITOR</h3></a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h1>About</h1>
+  <div class="about-images">
+    <img src="view.jpg">
+    <img src="blue.jpg">
+    <img src="rides.jpg">
+  </div>
+  <p>I’m Ahron Jay Delos Reyes, a multimedia student who loves photography, travel, and creating digital contents.</p>
+</section>
+
+<section id="services" class="section">
+  <h1>Services</h1>
+
+  <div class="services-slider">
+
+    <div class="service-card" onclick="openModal()">
+      <img src="Logo.png">
+      <p>Graphics Design</p>
+    </div>
+
+    <div class="service-card" onclick="openModal()">
+      <img src="breadblend (1).png">
+      <p>3D Animation</p>
+    </div>
+
+    <div class="service-card" onclick="openModal()">
+      <img src="Kkubo.png">
+      <p>3D Modelling</p>
+    </div>
+
+    <div class="service-card" onclick="openModal()">
+      <img src="Desktopset.png">
+      <p>3D Modelling</p>
+    </div>
+
+    <div class="service-card" onclick="openModal()">
+      <img src="seas.jpg">
+      <p>Photography</p>
+    </div>
+
+    <div class="service-card" onclick="openModal()">
+      <img src="File_002.jpg">
+      <p>Video Editing</p>
+    </div>
+
+    <div class="service-card" onclick="openModal()">
+      <img src="Building.png">
+      <p>Photo Editing</p>
+    </div>
+
+    <div class="service-card" onclick="openModal()">
+      <img src="Web.png">
+      <p>Web Designer</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h1>Let's Get In touch</h1>
+
+  <div class="social-media">
+    <a href="#"><img src="fb.png" class="social-icon"></a>
+    <a href="#"><img src="ig.png" class="social-icon"></a>
+    <a href="#"><img src="gmail.jpg" class="social-icon"></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>DelosReyes Final Project 2026</p>
+</footer>
+
+<!-- MODAL -->
+<div id="quoteModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2>Get a Quotation</h2>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Phone Number" required>
+      <textarea placeholder="Tell me about your project..." rows="4"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+function closeMenu() {
+  document.getElementById("navLinks").classList.remove("show");
+}
+
+function openModal() {
+  document.getElementById("quoteModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("quoteModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
